@@ -4,7 +4,11 @@ module.exports = function(app){
             type: String,
             required: true
         },
-        
+        userId: {
+            type: app.mongoose.Schema.ObjectId,
+            ref: 'User',
+            required: true
+        }
     });
 
     TodoSchema.plugin(require('mongoose-timestamp'));

@@ -4,12 +4,12 @@ module.exports = function(app){
             username: req.body.username,
             password: req.body.password
         });
-        
+
         user.save(function(err, instance){
-            if(err)
-                return res.status(500).sned(err);
-            
+            if (err)
+                return res.status(500).send(err);
+
             res.send(instance);
         });
     }
-}
+};

@@ -9,9 +9,9 @@ module.exports = function(app){
             required: true
         }
     });
-    
+
     UserSchema.plugin(require('mongoose-timestamp'));
-    
+
     var User = app.mongoose.model('User', UserSchema);
     return User;
 };
