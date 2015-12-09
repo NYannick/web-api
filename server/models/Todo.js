@@ -3,7 +3,8 @@ module.exports = function(app){
         title: {
             type: String,
             required: true
-        }
+        },
+        
     });
 
     TodoSchema.plugin(require('mongoose-timestamp'));
